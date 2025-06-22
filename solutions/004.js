@@ -6,12 +6,12 @@ async function checkItemStock(itemName) {
   return new Promise((resolve, reject) => {
     const isSuccess = Math.random() > 0.1;
     if (isSuccess) {
-      setTimeout(
+      setTimeout(() =>
         resolve({ item: itemName, status: "in_stock" }),
         getRandomArbitrary(0.1, 0.6) * 1000
       );
     } else {
-      setTimeout(
+      setTimeout(() =>
         reject(new Error(`Товар '${itemName}' закончился`)),
         getRandomArbitrary(0.1, 0.6) * 1000
       );
@@ -21,13 +21,13 @@ async function checkItemStock(itemName) {
 
 async function processPayment(orderInfo) {
   return new Promise((resolve, reject) => {
-    setTimeout(resolve({ paymentId: "...", status: "paid" }), 1 * 1000);
+    setTimeout(() => resolve({ paymentId: "...", status: "paid" }), 1 * 1000);
   });
 }
 
 async function createOrder(paymentInfo) {
   return new Promise((resolve, reject) => {
-    setTimeout(resolve({ orderId: "...", status: "created" }), 0.5 * 1000);
+    setTimeout(() => resolve({ orderId: "...", status: "created" }), 0.5 * 1000);
   });
 }
 
