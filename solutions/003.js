@@ -2,7 +2,7 @@ function fetchVideoDetails(videoId) {
   return new Promise((resolve, reject) => {
     const isSuccess = Math.random() > 0.1;
     if (isSuccess) {
-      setTimeout(
+      setTimeout(() =>
         resolve({
           title: "Глубокое погружение в асинхронный JavaScript",
           description:
@@ -11,7 +11,7 @@ function fetchVideoDetails(videoId) {
         1 * 1000
       );
     } else {
-      setTimeout(
+      setTimeout(() =>
         reject(new Error("Не удалось загрузить детали видео")),
         1 * 1000
       );
@@ -23,7 +23,7 @@ function fetchComments(videoId) {
   return new Promise((resolve, reject) => {
     const isSuccess = Math.random() > 0.3;
     if (isSuccess) {
-      setTimeout(
+      setTimeout(() =>
         resolve([
           "Отличное объяснение! Наконец-то понял event loop.",
           "А как насчет Web Workers?",
@@ -32,7 +32,7 @@ function fetchComments(videoId) {
         1.5 * 1000
       );
     } else {
-      setTimeout(
+      setTimeout(() =>
         reject(new Error("Не удалось загрузить комментарии")),
         1.5 * 1000
       );
@@ -44,7 +44,7 @@ function fetchRelatedVideos(videoId) {
   return new Promise((resolve, reject) => {
     const isSuccess = Math.random() > 0.05;
     if (isSuccess) {
-      setTimeout(
+      setTimeout(() =>
         resolve([
           "Что такое замыкания в JS?",
           "Паттерны проектирования для начинающих",
@@ -52,7 +52,7 @@ function fetchRelatedVideos(videoId) {
         0.8 * 1000
       );
     } else {
-      setTimeout(
+      setTimeout(() =>
         reject(new Error("Не удалось загрузить похожие видео")),
         0.8 * 1000
       );
