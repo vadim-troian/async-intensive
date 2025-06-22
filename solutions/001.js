@@ -1,6 +1,6 @@
 function fetchUserInfo() {
   return new Promise((resolve, reject) =>
-    setTimeout(
+    setTimeout(() =>
       resolve({
         name: "Алекс Алгоритмов",
         bio: "Строю будущее, по одному циклу за раз.",
@@ -12,7 +12,7 @@ function fetchUserInfo() {
 
 function fetchUserTweets() {
   return new Promise((resolve, reject) =>
-    setTimeout(
+    setTimeout(() =>
       resolve([
         "Коммичу в пятницу вечером. Что может пойти не так?",
         "Баг или фича? 🤔 #программирование",
@@ -25,7 +25,7 @@ function fetchUserTweets() {
 
 function fetchUserFollowers() {
   return new Promise((resolve, reject) =>
-    setTimeout(resolve(15000), 0.5 * 1000)
+    setTimeout(() => resolve(15000), 0.5 * 1000)
   );
 }
 
